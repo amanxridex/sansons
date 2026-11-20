@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand */
+  --sol-brand-picto: #de0614;
+  --sol-brand-reversed: #ffffff;
+  --sol-brand-text: #000000;
+  --brand-jll-letters: #000000;
+  --brand-jll-red: #de0614;
+
+  /* Solstice Palette */
+  --sol-color-white: #ffffff;
+  --sol-color-black: #000000;
+  --sol-color-solstice-glacier-50: #f2f6f7;
+  --sol-color-solstice-glacier-100: #eff3f4;
+  --sol-color-solstice-glacier-200: #dce2e5;
+  --sol-color-solstice-glacier-300: #cad1d5;
+  --sol-color-solstice-glacier-400: #919da2;
+  --sol-color-solstice-glacier-500: #5d7078;
+  --sol-color-solstice-glacier-600: #3c535c;
+  --sol-color-solstice-glacier-900: #0e1d23;
+  --sol-color-solstice-glacier-950: #080f13;
+
+  --sol-color-solstice-bahama-100: #e7f4f9;
+  --sol-color-solstice-bahama-400: #40a4c8;
+  --sol-color-solstice-bahama-500: #16799b;
+  --sol-color-solstice-bahama-600: #0a6484;
+  --sol-color-solstice-bahama-700: #004f6b;
+
+  --sol-color-solstice-ocean-500: #3b7488;
+  --sol-color-solstice-sand-50: #fbf8f4;
+  --sol-color-solstice-sand-100: #f9f2ec;
+  --sol-color-solstice-sand-200: #f0dfd1;
+
+  /* Semantic Surfaces & Text */
+  --sol-surface-default: #ffffff;
+  --sol-surface-subdued: #eff3f4;
+  --sol-surface-whisper: #f2f6f7;
+  --sol-surface-primary: #0e1d23;
+  --sol-surface-secondary: rgba(62, 119, 139, 0.16);
+  --sol-surface-secondary-hover: rgba(62, 119, 139, 0.25);
+  --sol-surface-overlays-level1: rgba(62, 119, 139, 0.06);
+  --sol-surface-overlays-level2: rgba(62, 119, 139, 0.16);
+  --sol-surface-interaction-strong: #16799b;
+  --sol-surface-interaction-bright: #40a4c8;
+  --sol-surface-interaction-subdued: #e7f4f9;
+
+  --sol-text-default: #0e1d23;
+  --sol-text-subdued: #3c535c;
+  --sol-text-interaction-default: #0a6484;
+  --sol-text-interaction-bright: #40a4c8;
+
+  --sol-stroke-default: #cad1d5;
+  --sol-stroke-subdued: #dce2e5;
+  --sol-stroke-strong: #919da2;
+  --sol-stroke-interaction-default: #40a4c8;
+
+  /* Typography */
+  --sol-font-primary: "Source Sans 3", "Source Han Sans SC", sans-serif;
+  --sol-radius-sm: 4px;
+  --sol-radius-md: 6px;
+  --sol-radius-lg: 8px;
+  --sol-radius-xl: 12px;
+
+  /* Container gutter */
+  --jll-gutter: 32px;
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --jll-gutter: 88px;
+  }
+}
+
+@layer base {
+  html {
+    font-family: var(--sol-font-primary);
+    color: var(--sol-text-default);
+    background-color: var(--sol-surface-default);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--sol-font-primary);
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--sol-text-default);
+    background-color: var(--sol-surface-default);
+    overflow-x: hidden;
+  }
+}
+
+/* Material Symbols helper matching weight 300 */
+.material-symbols-outlined {
+  font-family: "Material Symbols Outlined";
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+}
+
+/* Outer responsive layout container matching 1440px (88px margin) and 390px (32px margin) */
+.jll-container {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--jll-gutter);
+  padding-right: var(--jll-gutter);
+}
+
+/* Editorial card soft elevation */
+.jll-card-shadow {
+  box-shadow: 0 6px 24px rgba(14, 29, 35, 0.08);
+}
+
+/* Secondary tinted button */
+.jll-btn-secondary {
+  background-color: var(--sol-surface-secondary);
+  color: var(--sol-text-default);
+  border-radius: var(--sol-radius-md);
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.jll-btn-secondary:hover {
+  background-color: var(--sol-surface-secondary-hover);
+}
+
+/* Feedback tab rotated text */
+.jll-feedback-tab {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
