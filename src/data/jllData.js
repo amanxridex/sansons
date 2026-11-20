@@ -491,8 +491,7 @@ export const MORE_TO_EXPLORE_SLIDES = [
     description: "India activation follows New York and London as the next chapter in SANSONS's global brand campaign",
     ctaLabel: 'Read the article',
     href: jllUrl('/en-in/newsroom/jll-lights-up-mumbai-iconic-bandra-worli-sea-link'),
-    imageUrl:
-      'https://s7d1.scene7.com/is/image/joneslanglasalle/26-newsroom-jll-lights-up-mumbai-iconic-bandra-worli-sea-link?qlt=85&wid=1200&dpr=off&fit=constrain,0&fmt=webp',
+    imageUrl: '/sansons-sea-link.jpg',
     imageAlt: 'Mumbai Bandra-Worli Sea Link illuminated with SANSONS branding',
   },
   {
